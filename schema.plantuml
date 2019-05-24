@@ -1,0 +1,29 @@
+@startuml
+
+hide circle
+hide empty members
+
+entity Author {
+   * id
+   firstname
+   lastname
+}
+
+entity Post {
+   * id
+   title
+   content
+}
+
+entity Comment {
+   * id
+   content
+}
+
+Author ||--o{ Post
+
+Author ||--o{ Comment
+
+Post --o{ Comment
+
+@enduml
