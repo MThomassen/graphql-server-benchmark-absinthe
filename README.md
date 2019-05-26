@@ -1,16 +1,17 @@
 GraphQL Server
 ---
 
-GraphQL Benchmark Server implemented with [`Elixir's`](https://elixir-lang.org/) framework [`Phoenix`](https://phoenixframework.org/) and [`Absinthe`](https://absinthe-graphql.org/)
+GraphQL Benchmark Server implemented with [`Elixir`](https://elixir-lang.org/)'s frameworks [`Phoenix`](https://phoenixframework.org/) and [`Absinthe`](https://absinthe-graphql.org/)
 
 
-![GraphQL and RDBMS Schema](schema.png?raw=true "Schema")
+![GraphQL Schema](schema.png?raw=true "Schema")
 
 ### Starting the application (development)
 To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server`
+  * Start RDBMS and Author Service with `docker-compose up`
+  * Install GraphQL Server dependencies with `mix deps.get`
+  * Start GraphQL Server Phoenix endpoint with `mix phx.server`
 
 Now you can visit the [`GraphiQL Web Application`](http://localhost:4000/api/graphiql) from your browser.
 
