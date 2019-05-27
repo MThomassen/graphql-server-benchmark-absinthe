@@ -1,11 +1,17 @@
 defmodule GraphqlServer.MixProject do
   use Mix.Project
 
+  @description """
+     GraphQL Benchmark Server
+  """
   def project do
     [
       app: :graphql_server,
       version: "0.1.0",
       elixir: "~> 1.5",
+      name: "GraphQL Benchmark Server",
+      description: @description,
+      package: package(),
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -42,7 +48,18 @@ defmodule GraphqlServer.MixProject do
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:hackney, "~> 1.15"}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Michiel Thomassen"],
+      licenses: ["Apache License 2.0"],
+      links: %{
+        GitHub: "https://github.com/MThomassen/graphql-server-benchmark-absinthe"
+      }
     ]
   end
 

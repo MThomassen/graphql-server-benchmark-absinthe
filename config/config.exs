@@ -16,6 +16,9 @@ config :graphql_server, GraphqlServerWeb.Endpoint,
   secret_key_base: "p7EVtVy7kV5ctE1l3yckhAlHtvUIULnmePhRq2vk8dmCmsXYIFNozuwlv6dcq5Cw",
   pubsub: [name: GraphqlServer.PubSub, adapter: Phoenix.PubSub.PG2]
 
+# Configures external Author Service
+config :graphql_server, GraphqlServer.AuthorClient, url: [host: "localhost", port: 4001]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

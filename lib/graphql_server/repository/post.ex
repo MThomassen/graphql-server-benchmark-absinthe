@@ -1,5 +1,5 @@
 defmodule GraphqlServer.Repository.Post do
-  alias GraphqlServer.Repository.{Author, Comment}
+  alias GraphqlServer.Repository.Comment
 
   use Ecto.Schema
 
@@ -7,9 +7,7 @@ defmodule GraphqlServer.Repository.Post do
   schema "posts" do
     field :title, :string
     field :content, :string
-    belongs_to :author, Author,
-      foreign_key: :author_id, references: :id
-    has_many :comments, Comment,
-      foreign_key: :post_id, references: :id
+    field :author_id, :integer
+    has_many :comments, Comment, foreign_key: :post_id, references: :id
   end
 end
