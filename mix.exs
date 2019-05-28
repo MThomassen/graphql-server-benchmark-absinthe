@@ -7,8 +7,8 @@ defmodule GraphqlServer.MixProject do
   def project do
     [
       app: :graphql_server,
-      version: "0.1.0",
-      elixir: "~> 1.5",
+      version: "1.0.0",
+      elixir: "~> 1.7",
       name: "GraphQL Benchmark Server",
       description: @description,
       package: package(),
