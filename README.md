@@ -3,13 +3,14 @@ GraphQL Server
 
 GraphQL Benchmark Server implemented with [`Elixir`](https://elixir-lang.org/)'s frameworks [`Phoenix`](https://phoenixframework.org/) and [`Absinthe`](https://absinthe-graphql.org/)
 
-
 ![GraphQL Schema](schema.png?raw=true "Schema")
 
 ### Starting the application (development)
-To start your Phoenix server:
+To start the GraphQL Server:
 
   * Start RDBMS and Author Service with `docker-compose up`
+  * Install Hex package manager with `mix local.hex --if-missing`
+  * Install Rebar3 (Erlang build tool) with `mix local.rebar --force`
   * Install GraphQL Server dependencies with `mix deps.get`
   * Start GraphQL Server Phoenix endpoint with `mix phx.server`
 

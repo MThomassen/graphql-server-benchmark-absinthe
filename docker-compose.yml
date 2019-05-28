@@ -12,9 +12,10 @@ services:
       - "5432:5432"
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres']
+      start_period: 15s
       interval: 15s
       timeout: 5s
-      retries: 5
+      retries: 3
     
   backend:
     image: 'nginx:alpine'
