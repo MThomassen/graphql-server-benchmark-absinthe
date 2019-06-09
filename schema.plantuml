@@ -53,10 +53,8 @@ package "RDBMS" <<Database>> {
    SqlPost ||--o{ SqlComment
 }
 
-Author .[#blue]. SvcAuthor
-Post .[#blue]. SqlPost
-Comment .[#blue]. SqlComment
-
-
+Author .[#blue] SvcAuthor
+Post .[#blue] SqlPost
+Comment .[#blue] SqlComment
 
 @enduml
